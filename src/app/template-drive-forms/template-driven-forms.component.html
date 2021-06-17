@@ -1,0 +1,23 @@
+<div class="mx-4">
+<pre>
+    {{f.value | json}}
+    valid {{f.valid}}
+    dirty {{f.dirty}}
+    touched {{f.touched}}
+</pre>
+<form #f="ngForm" (submit)="addUser(f)">
+    <input 
+     [ngModel]="user?.username" 
+     name="username"
+     #usernameRef="ngModel"
+     [style.backgroundColor]="usernameRef.invalid && usernameRef.dirty ? '#fa8f8f': null"
+     placeholder="insert a username"
+     required>
+    <button type="submit"><i class="fa fa-user-plus"></i> {{user ? 'EDIT': 'ADD'}}</button>
+
+</form>
+
+<li *ngFor="let u of users" (click)="selectUser(u)">{{u.username}}</li>
+
+</div>
+
