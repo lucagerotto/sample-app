@@ -9,7 +9,7 @@ import { TabbarItem } from './tabbar/model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'booking';
+  title = 'sample-app';
   loaded = true;
   url = 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg';
   
